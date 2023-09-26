@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <section>
+            <h1 class="r-fit-text">Sprint 2</h1>
+          </section>
+          <section>
+            <h3>Inhoud sprint 2</h3>
+            <ul>
+              <li>Object oriented programming</li>
+              <li>Klassen, objecten en constructoren</li>
+              <li>Methodes</li>
+              <li>Array en arraylist</li>
+            </ul>
+          </section>
+          <section>
+            <h3>(Huis)werk</h3>
+            <ul>
+              <li>
+                Alle oefeningen/quizzes/opdrachten van hoofdstuk 1, 6, 7, 10
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Inleveropdracht</h3>
+            <ul>
+              <li>Rekenmachine + methods</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1 class="r-fit-text">Object oriented programming</h1>
+          </section>
+          <section>
+			  <h2><u><b>O</b></u
+				>bject <u><b>O</b></u
+				>riented <u><b>P</b></u
+				>rogramming = OOP
+				<ul></h2>
+              <li>
+                OOP focust meer op objecten die gemanipuleerd moeten worden en
+                niet zozeer op de logica.
+              </li>
+            </ul>
+            <img data-src="./img/OOP.png" />
+          </section>
+          <section>
+            <h2>Klassen</h2>
+            <ul>
+              <li>Objecten zijn overal te vinden rondom ons heen</li>
+              <li>Objecten hebben een "state" en een "behaviour"</li>
+              <li>Alles behalve primitieve types zijn objecten in Java</li>
+            </ul>
+            <img data-src="./img/Object.jpg" />
+          </section>
+          <section>
+            <h2>Klassen</h2>
+            <ul>
+              <li>Class = een "blueprint" van een object</li>
+              <li>Ze beschrijven de "state" en "behaviour" van een object</li>
+            </ul>
+            <div class="r-hstack">
+              <pre><code data-trim data-noescape>
+					public class Car {
+						String brand;
+						int horsepower;
+	
+						void goForward() {}
+						void brake() {}
+					}
+				</code></pre>
+              <img data-src="./img/Class.jpg" />
+            </div>
+          </section>
+		  <section>
+			<h2>Maken van klasses</h2>
+			<ul>
+				<li>We plaatsen eerst de velden in een klasse (state)</li>
+				<li>Daarna de plaatsen we de methodes in een klasse (behaviour)</li>
+			</ul>
+			<pre><code data-trim data-noescape>
+				public class Pokemon {
+					String name;
+					String type;
+					int level = 1;
+					int hp = 50;
+
+					public void attack() {
+						System.out.println("Attacking!");
+					}
+
+					public void levelUp() {
+						level++;
+						hp += 10;
+						System.out.println("I am now level " + level);
+					}
+				}
+			</code></pre>
+		  </section>
+		  <section>
+			<h2>Maken (instantiëren) van een object</h2>
+			<ul>
+				<li>We instantiëren een object adhv het "new" keyword</li>
+				<li>We kunnen oneindig veel instanties maken van een klasse</li>
+			</ul>
+			<pre><code data-trim data-noescape>
+				pulic class Main {
+					public static void main(String[] args) {
+						Pokemon p1 = new Pokemon();
+					}
+				}
+			</code></pre>
+		  </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
