@@ -22,7 +22,7 @@
 
         <section>
           <section>
-            <h1 class="r-fit-text">Sprint 2</h1>
+            <h1>Sprint 2</h1>
           </section>
           <section>
             <h3>Inhoud sprint 2</h3>
@@ -51,14 +51,14 @@
 
         <section>
           <section>
-            <h1 class="r-fit-text">Object oriented programming</h1>
+            <h1>Class & Object</h1>
           </section>
           <section>
-			  <h2><u><b>O</b></u
-				>bject <u><b>O</b></u
-				>riented <u><b>P</b></u
-				>rogramming = OOP
-				<ul></h2>
+			      <h2><u><b>O</b></u
+				    >bject <u><b>O</b></u
+				    >riented <u><b>P</b></u
+				    >rogramming = OOP
+				    <ul></h2>
               <li>
                 OOP focust meer op objecten die gemanipuleerd moeten worden en
                 niet zozeer op de logica.
@@ -90,49 +90,339 @@
 						void goForward() {}
 						void brake() {}
 					}
-				</code></pre>
+				    </code></pre>
               <img data-src="./img/Class.jpg" />
             </div>
           </section>
-		  <section>
-			<h2>Maken van klasses</h2>
-			<ul>
-				<li>We plaatsen eerst de velden in een klasse (state)</li>
-				<li>Daarna de plaatsen we de methodes in een klasse (behaviour)</li>
-			</ul>
-			<pre><code data-trim data-noescape>
-				public class Pokemon {
-					String name;
-					String type;
-					int level = 1;
-					int hp = 50;
+          <section>
+          <h2>Maken van klasses</h2>
+          <ul>
+            <li>We plaatsen eerst de velden in een klasse (state)</li>
+            <li>Daarna de plaatsen we de methodes in een klasse (behaviour)</li>
+          </ul>
+          <pre><code data-trim data-noescape>
+            public class Pokemon {
+              String name;
+              String type;
+              int level = 1;
+              int hp = 50;
 
-					public void attack() {
-						System.out.println("Attacking!");
-					}
+              public void attack() {
+                System.out.println("Attacking!");
+              }
 
-					public void levelUp() {
-						level++;
-						hp += 10;
-						System.out.println("I am now level " + level);
-					}
-				}
-			</code></pre>
-		  </section>
-		  <section>
-			<h2>Maken (instantiëren) van een object</h2>
-			<ul>
-				<li>We instantiëren een object adhv het "new" keyword</li>
-				<li>We kunnen oneindig veel instanties maken van een klasse</li>
-			</ul>
-			<pre><code data-trim data-noescape>
-				pulic class Main {
-					public static void main(String[] args) {
-						Pokemon p1 = new Pokemon();
-					}
-				}
-			</code></pre>
-		  </section>
+              public void levelUp() {
+                level++;
+                hp += 10;
+                System.out.println("I am now level " + level);
+              }
+            }
+          </code></pre>
+          </section>
+          <section>
+          <h2>Maken (instantiëren) van een object</h2>
+          <ul>
+            <li>We instantiëren een object adhv het "new" keyword</li>
+            <li>We kunnen oneindig veel instanties maken van een klasse</li>
+          </ul>
+          <pre><code data-trim data-noescape>
+            pulic class Main {
+              public static void main(String[] args) {
+                Pokemon p1 = new Pokemon();
+              }
+            }
+          </code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Constructors</h1>
+          </section>
+          <section>
+            <h2>Wat is het</h2>
+            <ul>
+              <li>Speciaal stukje code, onderdeel van klasse</li>
+              <li>Word eenmalig uitgevoerd bij het instantiëren</li>
+              <li>Kan ook de state van een object initialiseren</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Maken van een constructor</h2>
+            <ul>
+              <li>Staat na de fields (conventie)</li>
+              <li>Heeft dezelfde naam als de class</li>
+              <li>Heeft een code-block</li>
+              <pre>
+                <code data-trim data-noescape data-line-numbers="7 - 9">
+                  public class Pokemon {
+                    String name;
+                    String type;
+                    int level = 1;
+                    int hp = 50;
+
+                    public Pokemon() {
+
+                    }
+      
+                    public void attack() {
+                      System.out.println("Attacking!");
+                    }
+      
+                    public void levelUp() {
+                      level++;
+                      hp += 10;
+                      System.out.println("I am now level " + level);
+                    }
+                  }
+                </code>
+              </pre>
+            </ul>
+          </section>
+          <section>
+            <h2>Code in constructor</h2>
+            <ul>
+              <li>Logica die eenmalig word uitgevoerd</li>
+              <li>Initialiseren van de fields</li>
+            </ul>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2, 7 - 11">
+                public class Pokemon {
+                  String name;
+                  String type;
+                  int level = 1;
+                  int hp = 50;
+
+                  public Pokemon(String name) {
+                    System.out.println("Pokemon object aangemaakt");
+
+                    this.name = name;
+                  }
+    
+                  public void attack() {
+                    System.out.println("Attacking!");
+                  }
+    
+                  public void levelUp() {
+                    level++;
+                    hp += 10;
+                    System.out.println("I am now level " + level);
+                  }
+                }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Gebruik maken van de constructor</h2>
+            <ul>
+              <li>Bij het aanmaken van een object word de constructor aangeroepen (gecalled)</li>
+            </ul>
+            <pre>
+              <code data-trim data-noescape>
+                public class Main {
+                  public static void main(String[] args) {
+                    Pokemon p1 = new Pokemon();
+                    Pokemon p2 = new Pokemon("Pikachu");
+                  }
+                }
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Methods</h1>
+          </section>
+          <section>
+            <h2>Wat zijn methodes</h2>
+            <ul>
+              <li>Bestaan in meeste programmeertalen</li>
+              <li>Een methode heeft een bepaalde functionaliteit</li>
+              <li>Objecten kunnen deze callen</li>
+              <li>Naam is meestal een werkwoord</li>
+              <li>Kunnen oneindig vaak gecalled worden</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Maken van methode</h2>
+            <ul>
+              <li>Hebben een modifier meestal "public"</li>
+              <li>Hebben een return type die iets terug zal geven</li>
+              <li>Hebben een naam om aan te roepen</li>
+              <li>Hebben parameter-list om values mee te geven</li>
+              <li>Hebben een body met code die word uitgevoerd</li>
+            </ul>
+            <img data-src="./img/Methods.png">
+          </section>
+          <section>
+            <h2>Voorbeelden van methodes</h2>
+            <pre>
+              <code data-trim data-noescape>
+                public int addTwoNumbers(int a, int b) {
+                  return a + b;
+                }
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-noescape>
+                public String addTwoStrings(String a, String b) {
+                  return String.format("%s %s", a, b);
+                }
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-noescape>
+                public void repeatAfterMe(String a) {
+                  System.out.println(a);
+                }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Methode aanroepen</h2>
+            <ul>
+              <li>Maak een object</li>
+              <li>Roep de methode op adhv het object variabele</li>
+            </ul>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="5">
+                public class Main {
+                  public static void main(String[] args) {
+                    Pokemon p1 = new Pokemon();
+
+                    p1.sayHi();
+                  }
+                }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Methode aanroepen met parameter</h2>
+            <ul>
+              <li>Maak een object</li>
+              <li>Roep de methode op adhv het object variabele</li>
+              <li>Geef de parameter mee tussen de haakjes</li>
+            </ul>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="5">
+                public class Main {
+                  public static void main(String[] args) {
+                    Pokemon p1 = new Pokemon();
+
+                    p1.repeatAfterMe("Hello world!");
+                  }
+                }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Methode aanroepen met return type</h2>
+            <ul>
+              <li>Maak een object</li>
+              <li>Roep de methode op adhv het object variabele</li>
+              <li>Sla de teruggegeven value op in een variabele</li>
+            </ul>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="5">
+                public class Main {
+                  public static void main(String[] args) {
+                    Pokemon p1 = new Pokemon();
+
+                    int addedNumbers = p1.addTwoNumbers(6, 8);
+                  }
+                }
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Array & ArrayList</h1>
+          </section>
+          <section>
+            <h2>Wat is een array</h2>
+            <ul>
+              <li>We hadden het er kort over (.toCharArray())</li>
+              <li>Handig om meerdere waarden op te slaan in 1 variabele</li>
+              <li>Een container object waarin meerdere waardes van hetzelfde type kunnen worden opgeslagen.</li>
+              <li>Je moet aangeven hoeveel waarden je wilt opslaan</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Maken van een array</h2>
+            <img data-src="./img/ArraySyntax.png">
+          </section>
+          <section>
+            <h2>Index van een array</h2>
+            <ul>
+              <li>Index begint bij 0</li>
+              <li>Array lengte is aantal waarden startend vanaf 0</li>
+            </ul>
+            <img data-src="./img/ArrayIndex.jpeg">
+          </section>
+          <section>
+            <h2>Waarde in een array</h2>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  String[] names = { "Robbe", "Bram", "Rens", "Marlon" };
+
+                  System.out.println(names[0]); // Output = Robbe
+                }
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  String[] names = new String[4];
+
+                  names[2] = "Robbe"; // { "", "", "Robbe". "" }
+                }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Wat is een ArrayList</h2>
+            <ul>
+              <li>Class van Java Collection Framework</li>
+              <li>Gebruikt dynamische arrays</li>
+              <li>Geen limiet op lengte en moet ook niet voor gedefinieerd worden</li>
+              <li>Standaar is lengte 10 maar schaalt omhoog wanneer nodig is</li>
+              <li>Trager en zwaarder dan standaard array</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Gebruik van ArrayList</h2>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();
+
+                  names.add("Robbe");
+                }
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();
+
+                  names.get(0);
+                }
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();
+
+                  names.remove("Robbe");
+                }
+              </code>
+            </pre>
+          </section>
         </section>
 
       </div>
