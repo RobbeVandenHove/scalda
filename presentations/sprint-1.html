@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="../dist/reset.css" />
+    <link rel="stylesheet" href="../dist/reveal.css" />
+    <link rel="stylesheet" href="../dist/theme/black.css" />
+    <link rel="stylesheet" href="../custom-styles/index.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <a href="../index.html" class="return">&larr; Ga terug</a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section>
+            <h1>Sprint 1</h1>
+          </section>
+          <section>
+            <h3>Sprint backlog</h3>
+            <ul>
+              <li>US-PRG-O1: Variabelen, datatypes en operatoren</li>
+              <li>US-PRG-O2: Conditionele statements</li>
+              <li>US-PRG-O3: Iteratie statements</li>
+              <li>US-PRG-O4: Array en ArrayList</li>
+              <li>US-PRG-O5: Math class (extraatje)</li>
+            </ul>
+          </section>
+          <section>
+            <h3>(Huis)werk</h3>
+            <ul>
+              <li>
+                Alle oefeningen/quizzes/opdrachten van hoofdstuk 2, 3, 4, 5, 10
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Inleveropdracht</h3>
+            <ul>
+              <li>Oefening 1 - 6 op pagina "Inleveropdracht" op cum laude</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Variabelen, datatypes en operatoren</h1>
+          </section>
+          <section>
+            <h2>Variabelen</h2>
+            <ul>
+              <li>Containers die data vasthouden.</li>
+              <li>Variabelen hebben een naam en een waarde.</li>
+              <li>Tijdelijk data opslaan in Java.</li>
+              <li>Kan oneindig vaak aangepast worden.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Voorbeelden</h2>
+            <pre>
+                <code data-trim data-noescape data-line-numbers="3 - 6">
+                    public class Main {
+                        public static void main(String[] args) {
+                            int age = 22;
+                            String name = "Robbe";
+                            char gender = "m";
+                            float averageScore = 7,6f;
+                        }
+                    }
+                </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Datatypes</h2>
+            <ul>
+              <li>Java is statisch en sterk getypt</li>
+              <li>
+                2 soorten datatypes
+                <ul>
+                  <li>Primitieve datatypes</li>
+                  <li>Niet primitieve datatypes</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Primitieve datatypes</h2>
+            <ul>
+              <li>boolean: true of false</li>
+              <li>byte: getal -128 tot 127</li>
+              <li>char: karakter</li>
+              <li>short: getal van 16-bit</li>
+              <li>int: getal van 32-bit</li>
+              <li>long: getal van 64-bit</li>
+              <li>float: kommagetal van 32-bit</li>
+              <li>double: kommagetal van 64-bit</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Niet primitieve datatypes</h2>
+            <ul>
+              <li>String: woorden, teksten, sequency van karakters</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Operatoren</h2>
+            <ul>
+              <li>Functies uitvoeren</li>
+              <li>
+                3 groepen
+                <ul>
+                  <li>Rekenkundige functies</li>
+                  <li>Logische functies</li>
+                  <li>Relationele functies</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Rekenkundige functies</h2>
+            <ul>
+              <li>(+, -, *, /, %)</li>
+              <li>Uitvoeren van wiskundige vergelijkingen</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Rekenkundige functies</h2>
+            <ul>
+              <li>|| = of-poort</li>
+              <li>&& = en-poort</li>
+              <li>! = niet-poort</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Relationele functies</h2>
+            <ul>
+              <li>(<, >, ==, <=, >=)</li>
+              <li>Variabelen vergelijken tov elkaar</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Conditionele statements</h1>
+          </section>
+          <section>
+            <h2>If - Else statement</h2>
+            <ul>
+              <li>Beïnvloeden van de uitvoering van programma</li>
+              <li>Ook wel bekend als boolean expressions</li>
+              <li>If block uitgevoerd bij true</li>
+              <li>Else block uitgevoerd bij false</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Voorbeeld If - Else statement</h2>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="3 - 9">
+                  public class Main {
+                      public static void main(String[] args) {
+                          String docent = "Robbe";
+                          if (docent == "Robbe") {
+                              System.out.println("Hello " + docent);
+                          }
+                          else {
+                              System.out.println("Where is " + docent);
+                          }
+                      }
+                  }
+              </code>
+          </pre>
+          </section>
+          <section>
+            <h2>Else - if statement</h2>
+            <ul>
+              <li>Kan oneindig aantal statements checken</li>
+              <li>Werkt zoals if - else statement</li>
+              <li>Er wordt altijd maar 1 code block uitgevoerd</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Voorbeeld If - Else statement</h2>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="3 - 12">
+                  public class Main {
+                      public static void main(String[] args) {
+                          String docent = "Robbe";
+                          if (docent == "Robbe") {
+                              System.out.println("PRG: " + docent);
+                          }
+                          else if (docent == "Marlon") {
+                              System.out.println("FED: " + docent);
+                          }
+                          else {
+                            System.out.println("LBS: " + docent);
+                          }
+                      }
+                  }
+              </code>
+          </pre>
+          </section>
+          <section>
+            <h2>Switch statement</h2>
+            <ul>
+              <li>Word ook gebruikt om programma te beïnvloeden</li>
+              <li>Wanneer we checken op heel veel statements</li>
+              <li>Case kan nooit een operator uitvoeren</li>
+              <li>Break nodig om te stoppen</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Voorbeeld switch statement</h2>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="3 - 8">
+                  public class Main {
+                      public static void main(String[] args) {
+                          String docent = "Robbe";
+                          switch(docent) {
+                            case "Robbe": System.out.println("PRG: " + docent); break;
+                            case "Rens": System.out.println("LBS: " + docent); break;
+                            case "Marlon": System.out.println("FED: " + docent); break;
+                          }
+                      }
+                  }
+              </code>
+          </pre>
+          </section>
+          <section>
+            <h2>Default case</h2>
+            <ul>
+              <li>Wanneer geen case matcht</li>
+              <li>Break niet nodig (word altijd verbroken)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Voorbeeld default case</h2>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="3 - 9">
+                  public class Main {
+                      public static void main(String[] args) {
+                          String docent = "Unknown";
+                          switch(docent) {
+                            case "Robbe": System.out.println("PRG: " + docent); break;
+                            case "Rens": System.out.println("LBS: " + docent); break;
+                            case "Marlon": System.out.println("FED: " + docent); break;
+                            default: System.out.println("Weekend!");
+                          }
+                      }
+                  }
+              </code>
+          </pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Iteratie statements</h1>
+          </section>
+          <section>
+            <h2>Wat is iteratie</h2>
+            <ul>
+              <li>Iteratie (iteration) is een herhaling</li>
+              <li>Loopen over bepaalde code</li>
+              <li>
+                Word sequentieel uitgevoerd tenzij er gebruik gemaakt word van
+                het continue of break keyword
+              </li>
+              <li>
+                Soorten loops in Java:
+                <ul>
+                  <li>For loop</li>
+                  <li>While loop</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>For loop</h2>
+            <div class="r-hstack">
+              <img data-src="../img/ForLoopSchema.png" />
+              <ul style="font-size: 01.5rem; padding-left: 2rem">
+                <li>Wanneer we precies het aantal iteraties kennen</li>
+                <li>
+                  3 belangrijke onderdelen:
+                  <ul>
+                    <li>
+                      initialiser: Aanmaken variable VOOR de loop. Wordt ook
+                      maar 1-malig uitgevoerd.
+                    </li>
+                    <li>Condition: Word telkens gecheckt</li>
+                    <li>Increment: Word NA elke iteratie uitgevoerd</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>Werking for loop</h2>
+            <div class="r-hstack">
+              <pre>
+                <code data-trim data-noescape data-line-numbers="3 - 5">
+                    public class Main {
+                        public static void main(String[] args) {
+                            for (int i = 0; i < 5; i++) {
+                              System.out.println(i);
+                            }
+                        }
+                    }
+                </code>
+              </pre>
+              <ul style="font-size: 1.5rem; padding-left: 5rem">
+                <li>Initialiseren van een variabele</li>
+                <li>variabele checken tegen conditie</li>
+                <li>Uitvoeren van het code block</li>
+                <li>Incrementeren van variabele</li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>While loop</h2>
+            <div class="r-hstack">
+              <img data-src="../img/WhileLoopSchema.png" />
+              <ul style="font-size: 01.5rem; padding-left: 2rem">
+                <li>Wanneer we NIET precies het aantal iteraties kennen</li>
+                <li>Houd geen index bij</li>
+                <li>Blijft lopen totdat conditie false teruggeeft</li>
+                <li>Voor uitvoeren code block word conditie getest</li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>Syntax while loop</h2>
+            <div class="r-hstack">
+              <pre>
+                <code data-trim data-noescape data-line-numbers="3 - 7">
+                    public class Main {
+                        public static void main(String[] args) {
+                            String docent = "Robbe";
+                            while (docent == "Robbe") {
+                              System.out.println("Hello " + docent);
+                              docent = "Marlon";
+                            }
+                        }
+                    }
+                </code>
+              </pre>
+              <ul style="font-size: 1.5rem; padding-left: 5rem">
+                <li>Gebruik while keyword</li>
+                <li>Vergelijking tussen haakjes</li>
+                <li>Code block uitschrijven</li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Array & ArrayList</h1>
+          </section>
+          <section>
+            <h2>Wat is een array</h2>
+            <ul>
+              <li>Handig om meerdere waarden op te slaan in 1 variabele</li>
+              <li>
+                Een container object waarin meerdere waardes van hetzelfde type
+                kunnen worden opgeslagen.
+              </li>
+              <li>Je moet aangeven hoeveel waarden je wilt opslaan</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Maken van een array</h2>
+            <img data-src="../img/ArraySyntax.png" />
+          </section>
+          <section>
+            <h2>Index van een array</h2>
+            <ul>
+              <li>Index begint bij 0</li>
+              <li>Array lengte is aantal waarden startend vanaf 0</li>
+            </ul>
+            <img data-src="../img/ArrayIndex.jpeg" />
+          </section>
+          <section>
+            <h2>Waarde in een array</h2>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  String[] names = { "Robbe", "Bram", "Rens", "Marlon" };
+
+                  System.out.println(names[0]); // Output = Robbe
+                }
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  String[] names = new String[4];
+
+                  names[2] = "Robbe"; // { "", "", "Robbe". "" }
+                }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Wat is een ArrayList</h2>
+            <ul>
+              <li>Class van Java Collection Framework</li>
+              <li>Gebruikt dynamische arrays</li>
+              <li>
+                Geen limiet op lengte en moet ook niet voor gedefinieerd worden
+              </li>
+              <li>
+                Standaar is lengte 10 maar schaalt omhoog wanneer nodig is
+              </li>
+              <li>Trager en zwaarder dan standaard array</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Gebruik van ArrayList</h2>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();
+
+                  names.add("Robbe");
+                }
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();
+
+                  names.get(0);
+                }
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-noescape data-line-numbers="2 - 4">
+                public static void main(String[] args) {
+                  ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();
+
+                  names.remove("Robbe");
+                }
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Math class (extraatje)</h1>
+          </section>
+          <section>
+            <h2>Wat is Math class</h2>
+            <ul>
+              <li>Komt uit de java.lang package</li>
+              <li>Om moeilijke wiskundige berekeningen uit te voeren</li>
+              <li>Class zit vol methoden met wiskundige bewerkingen</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Methoden van Math class</h2>
+            <img data-src="../img/MathClass.png" />
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
