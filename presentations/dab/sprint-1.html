@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Scalda | DAB | Sprint 1</title>
+
+    <link rel="stylesheet" href="../../dist/reset.css" />
+    <link rel="stylesheet" href="../../dist/reveal.css" />
+    <link rel="stylesheet" href="../../dist/theme/black.css" />
+    <link rel="stylesheet" href="../../custom-styles/index.css" />
+    <link rel="icon" href="../../img/icon.png" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <a href="index.html" class="return">&larr; Ga terug</a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section>
+            <h1>Sprint 1</h1>
+          </section>
+          <section>
+            <h3>Sprint backlog</h3>
+            <ul>
+              <li>US-DAB-O-1: DBMS Introductie</li>
+              <li>US-DAB-O-2: Introductie SQL</li>
+              <li>US-DAB-O-3: Het Relationele Datamodel</li>
+            </ul>
+          </section>
+          <section>
+            <h3>(Huis)werk</h3>
+            <ul>
+              <li>
+                Bestuderen van alle theorie + opzoeken wat niet duidelijk is
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Inleveropdracht</h3>
+            <ul>
+              <li>Inleveropdracht onder review tab in cum laude</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>DBMS Introductie</h1>
+          </section>
+          <section>
+            <h3>Gegevens vs informatie</h3>
+            <ul>
+              <li>Gegevens zijn feiten/symbolen</li>
+              <li>
+                Informatie zijn gegevens met praktisch nut of relevante
+                nieuwswaarde
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Voorbeeld</h3>
+            <ul>
+              <li>
+                Telefoonboek bevat nummers met gekende gekoppelde gebruiker
+              </li>
+              <li>Zonder naam van nummers = slechts gegevens</li>
+              <li>Dit kan zelfs als ruis gezien worden</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Database</h3>
+            <ul>
+              <li>Opgeslagen gegevens = database</li>
+              <li>Manier gegevens zijn opgeslagen = datamodel</li>
+              <li>Software voor databases = DBMS</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Wat is database</h3>
+            <ul>
+              <li>Een database is een (digitaal) archief</li>
+              <li>Ingericht om data flexibel te gebruiken</li>
+              <li>Databases worden overal gebruikt</li>
+              <li>Belangrijkste rol om data op te slaan</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Minimale voorwaarden</h3>
+            <ul>
+              <li>Gegevens eenvoudig kunnen opslaan</li>
+              <li>Gegevens eenvoudig kunnen opzoeken</li>
+              <li>Gegevens kunnen gewijzigd worden</li>
+              <li>
+                Gegevens verwijderen zoder dat het een nadelig effect heeft voor
+                het systeem
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Datamodel</h3>
+            <p style="font-size: 1.8rem">
+              Datamodel ookwel gegevensmodel of Bachmandiagram. = beschrijving
+              van de structuur van gegens in informatiesysteem, welke gegevens
+              en verbanden tussen gegevens.
+            </p>
+            <ul>
+              <li>tabellen</li>
+              <li>velden</li>
+              <li>sleutels</li>
+              <li>Relaties tussen de tabellen</li>
+            </ul>
+          </section>
+          <section>
+            <h3>DBMS</h3>
+            <ul>
+              <li>DBMS krijgt instructies, handelt nooit zelf</li>
+              <li>Kan manueel of met programma</li>
+              <li>DBMS word aangesproken door bepaalde talen</li>
+              <li>DBMS verwerkt de instructies</li>
+              <li>Belangrijkste databasetaal is SQL</li>
+              <li>Handhaven van integriteit van de gegevens</li>
+            </ul>
+          </section>
+          <section>
+            <h3>integriteit</h3>
+            <ul>
+              <li>
+                Verschillende databases mogen elkaar niet tegenspreken
+                (inconsistentie)
+              </li>
+              <li>
+                Redundantie moet tegengegaan worden (redundantie = dubbele data)
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>SQL</h1>
+          </section>
+          <section>
+            <h3>Databases en SQL</h3>
+            <ul>
+              <li>Niet zomaar wat data in database</li>
+              <li>
+                Gegevens hebben structuur, eigenschappen en mogelijks relaties
+                met andere gegevens
+              </li>
+              <li>
+                SQL statements worden op 2 manieren gebruikt
+                <ul>
+                  <li>Ingetypt worden en direct uitgevoerd</li>
+                  <li>Direct uitgevoerd door hogere generatietaal</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>DDL</h3>
+            <ul>
+              <li>Data Definition Language</li>
+              <li>Structuur aan database brengen</li>
+              <li>Essentieel om aan te beginnen</li>
+            </ul>
+          </section>
+          <section>
+            <h3>DCL</h3>
+            <ul>
+              <li>Data Control Language</li>
+              <li>Rechten toevoegen aan database</li>
+              <li>Uitgevoerd door administrator</li>
+            </ul>
+          </section>
+          <section>
+            <h3>DML</h3>
+            <ul>
+              <li>Data Manipulation Language</li>
+              <li>Verwerken van gegevens in de database</li>
+              <li>Word door gebruiker gebruikt</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Relational datamodel</h1>
+          </section>
+          <section>
+            <h3>Bachmandiagram</h3>
+            <ul>
+              <li>beschrijving van structuur van gegevens</li>
+              <li>zichtbaar welke gegevens worden opgeslagen</li>
+              <li>weergeven van relaties tussen tabellen en gegevens</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Tabellen, kolommen en rijen</h3>
+            <ul>
+              <li>Alle data wordt opgeslagen in tabellen</li>
+              <li>Officiele naam tabel is relatie</li>
+              <li>Een rij in een tabel is dus 1 record</li>
+              <li>
+                Tabel heeft 2 belangrijke eigenschappen
+                <ul>
+                  <li>Kruising rij en kolom kan maar 1 waarde bevatten</li>
+                  <li>Rijen in tabel hebben geen specifieke volgorde</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3></h3>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../dist/reveal.js"></script>
+    <script src="../../plugin/notes/notes.js"></script>
+    <script src="../../plugin/markdown/markdown.js"></script>
+    <script src="../../plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
