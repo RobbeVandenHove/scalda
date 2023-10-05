@@ -1,9 +1,11 @@
 body {
-  background-color: #000;
+  background-color: #13171a;
+  display: flex;
+  gap: 1rem;
 }
 
 .grid {
-  padding: 2rem;
+  padding: 5rem 2rem 2rem 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5rem;
@@ -17,24 +19,27 @@ body {
 }
 
 .grid-item {
-  background-color: #222;
+  background-color: #42bafe;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
+  min-width: 270px;
   padding: 1rem;
   border-radius: 15px;
   aspect-ratio: 2;
 }
 
 .grid-item--navigation a {
-  color: #fff;
-  font-size: 1.2rem;
+  color: #42bafe;
+  text-transform: capitalize;
+  background-color: #fff;
+  font-size: 1rem;
   text-decoration: none;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #fff;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
 }
 
 .return {

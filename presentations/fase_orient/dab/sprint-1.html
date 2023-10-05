@@ -9,14 +9,14 @@
 
     <title>Scalda | DAB | Sprint 1</title>
 
-    <link rel="stylesheet" href="../../dist/reset.css" />
-    <link rel="stylesheet" href="../../dist/reveal.css" />
-    <link rel="stylesheet" href="../../dist/theme/black.css" />
-    <link rel="stylesheet" href="../../custom-styles/index.css" />
-    <link rel="icon" href="../../img/icon.png" />
+    <link rel="stylesheet" href="../../../dist/reset.css" />
+    <link rel="stylesheet" href="../../../dist/reveal.css" />
+    <link rel="stylesheet" href="../../../dist/theme/black.css" />
+    <link rel="stylesheet" href="../../../custom-styles/index.css" />
+    <link rel="icon" href="../../../img/icon.png" />
 
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
   </head>
   <body>
     <a href="index.html" class="return">&larr; Ga terug</a>
@@ -217,16 +217,101 @@
             </ul>
           </section>
           <section>
-            <h3></h3>
+            <h3>integriteit</h3>
+            <div class="r-hstack">
+              <img data-src="../../../img/fase_orient/dab/Integrity.png" />
+              <ul style="padding-left: 2rem">
+                <li>Kwaliteitskenmerk van gegevens</li>
+                <li>
+                  Synoniem voor betrouwbaarheid
+                  <ul style="font-size: 1.5rem">
+                    <li>Juist (rechtmatigheid)</li>
+                    <li>Volledig (niet te veel, niet te weinig)</li>
+                    <li>Tijdig (op tijd)</li>
+                    <li>
+                      Geautoriseerd (gemuteerd door een gerechtegd persoon)
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h3>Sleutels (keys)</h3>
+            <ul>
+              <li>Primary key (PK)</li>
+              <li>Candidate key (CK)</li>
+              <li>Alternative key (AK)</li>
+              <li>Foreign key (FK)</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Primary key</h3>
+            <ul>
+              <li>Word gebruikt als unieke identificatie van record</li>
+              <li>Kan bestaan uit 1 of meerdere kolomment</li>
+              <li>2 verschillende rijen mogen nooit dezelfde PK hebben</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Candidate key</h3>
+            <ul>
+              <li>Soms meerdere mogelijkheden om PK te maken</li>
+              <li>Slechts 1 optie word effectief PK</li>
+              <li>
+                Velden die de mogelijkheden hebben als PK worden dan CK's
+                genoemd
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Alternative key</h3>
+            <ul>
+              <li>De CK die niet de PK is</li>
+              <li>Verzamelnaam voor alle PK's en CK's</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Foreign key</h3>
+            <ul>
+              <li>Populatie is deelverzameling van PK van een andere tabel</li>
+              <li>Gebruikt om relatie tussen tabellen vast te leggen</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Relaties</h1>
+          </section>
+          <section>
+            <h3>Welke bestaan er</h3>
+            <ul>
+              <li>1 op 1 relatie (1 op 1)</li>
+              <li>1 op veel relatie (1 op n)</li>
+              <li>veel op 1 relatie (n op 1)</li>
+              <li>veel op veel relatie (n op n)</li>
+            </ul>
+          </section>
+          <section>
+            <h3>1 op 1 relatie</h3>
+            <img data-src="../../../img/fase_orient/dab/OneToOne.png" />
+          </section>
+          <section>
+            <h3>1 op veel relatie</h3>
+            <img data-src="../../../img/fase_orient/dab/OneToMany.png" />
+          </section>
+          <section>
+            <h3>veel op veel relatie</h3>
+            <img data-src="../../../img/fase_orient/dab/ManyToMany.png" />
           </section>
         </section>
       </div>
     </div>
 
-    <script src="../../dist/reveal.js"></script>
-    <script src="../../plugin/notes/notes.js"></script>
-    <script src="../../plugin/markdown/markdown.js"></script>
-    <script src="../../plugin/highlight/highlight.js"></script>
+    <script src="../../../dist/reveal.js"></script>
+    <script src="../../../plugin/notes/notes.js"></script>
+    <script src="../../../plugin/markdown/markdown.js"></script>
+    <script src="../../../plugin/highlight/highlight.js"></script>
     <script>
       // More info about initialization & config:
       // - https://revealjs.com/initialization/
