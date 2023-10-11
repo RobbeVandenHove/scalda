@@ -16,7 +16,7 @@ Maak op je pc ergens een mapje waarin je de "website/presentatie" wilt opslaan. 
 git clone https://github.com/RobbeVandenHove/scalda.git
 ```
 
-Je zal zien dat er nu een mapje in jou mapje is aangemaakt met de naam presentatie.
+Je zal zien dat er nu een mapje in jou mapje is aangemaakt navigeer dan naar het scalda mapje.
 
 Voer daarna deze commando's uit.
 
