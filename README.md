@@ -1,50 +1,49 @@
-<p align="center">
-  <a href="https://revealjs.com">
-  <img src="https://hakim-static.s3.amazonaws.com/reveal-js/logo/v1/reveal-black-text-sticker.png" alt="reveal.js" width="500">
-  </a>
-  <br><br>
-  <a href="https://github.com/hakimel/reveal.js/actions"><img src="https://github.com/hakimel/reveal.js/workflows/tests/badge.svg"></a>
-  <a href="https://slides.com/"><img src="https://s3.amazonaws.com/static.slid.es/images/slides-github-banner-320x40.png?1" alt="Slides" width="160" height="20"></a>
-</p>
+# Hoe kan je de presentatie bekijken?
 
-reveal.js is an open source HTML presentation framework. It enables anyone with a web browser to create beautiful presentations for free. Check out the live demo at [revealjs.com](https://revealjs.com/).
+## Installeer git op je PC
 
-The framework comes with a powerful feature set including [nested slides](https://revealjs.com/vertical-slides/), [Markdown support](https://revealjs.com/markdown/), [Auto-Animate](https://revealjs.com/auto-animate/), [PDF export](https://revealjs.com/pdf-export/), [speaker notes](https://revealjs.com/speaker-view/), [LaTeX typesetting](https://revealjs.com/math/), [syntax highlighted code](https://revealjs.com/code/) and an [extensive API](https://revealjs.com/api/).
+Ga naar <a href="https://git-scm.com/download/win">deze link</a> en installeer git. Let op wanneer je de stappen uitvoert van de git installer. Zorg ervoor dat je de optie <b>Use git from the Windows Command Prompt</b> selecteerd. Zoniet zal je zelf een PATH moeten toevoegen om git via de command prompt te laten werken.
 
----
+## Installeer nvm (node version manager) op je pc
 
-Want to create reveal.js presentation in a graphical editor? Try <https://slides.com>. It's made by the same people behind reveal.js.
+Ga naar <a href="https://github.com/coreybutler/nvm-windows/releases">deze link</a>. Scroll naar beneden waar je alle downloads ziet. Zorg ervoor dat je <b>nvm-setup.zip</b> installeerd. Open de gedownloade zip-file en voltooi alle stappen van de nvm installer.
 
----
+## Maak een mapje
 
-### Sponsors
-Hakim's open source work is supported by <a href="https://github.com/sponsors/hakimel">GitHub sponsors</a>. Special thanks to:
-<div align="center">
-  <table>
-    <td align="center">
-      <a href="https://workos.com/?utm_campaign=github_repo&utm_medium=referral&utm_content=revealjs&utm_source=github">
-        <div>
-          <img src="https://user-images.githubusercontent.com/629429/151508669-efb4c3b3-8fe3-45eb-8e47-e9510b5f0af1.svg" width="290" alt="WorkOS">
-        </div>
-        <b>Your app, enterprise-ready.</b>
-        <div>
-          <sub>Start selling to enterprise customers with just a few lines of code. Add Single Sign-On (and more) in minutes instead of months.</sup>
-        </div>
-      </a>
-    </td>
-  </table>
-</div>
+Maak op je pc ergens een mapje waarin je de "website/presentatie" wilt opslaan. Open nu dit mapje in de cmd. Voer dit command in, in de cmd.
 
----
+```
+git clone https://github.com/RobbeVandenHove/scalda.git
+```
 
-### Getting started
-- 🚀 [Install reveal.js](https://revealjs.com/installation)
-- 👀 [View the demo presentation](https://revealjs.com/demo)
-- 📖 [Read the documentation](https://revealjs.com/markup/)
-- 🖌 [Try the visual editor for reveal.js at Slides.com](https://slides.com/)
-- 🎬 [Watch the reveal.js video course (paid)](https://revealjs.com/course)
+Je zal zien dat er nu een mapje in jou mapje is aangemaakt met de naam presentatie.
 
---- 
-<div align="center">
-  MIT licensed | Copyright © 2011-2023 Hakim El Hattab, https://hakim.se
-</div>
+Voer daarna deze commando's uit.
+
+```
+nvm install --lts
+```
+
+```
+nvm use --lts
+```
+
+## Opstarten
+
+De allereerste keer dat je de presentatie wilt opstarten zal je eerst dit commando moeten uitvoeren.
+
+```
+npm install
+```
+
+Elke keer dat je de presentatie wilt zien zal je een aantal commando's moeten uitvoeren voordat je de presentatie kan opstarten.
+
+```
+git pull
+```
+
+```
+npm start
+```
+
+Ga nu in je browser naar http://localhost:8000 om de presentatie te zien.
