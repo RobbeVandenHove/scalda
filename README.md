@@ -2,7 +2,7 @@
 
 ## Installeer git op je PC
 
-Ga naar <a href="https://git-scm.com/download/win">deze link</a> en installeer git. Let op wanneer je de stappen uitvoert van de git installer. Zorg ervoor dat je de optie <b>Use git from the Windows Command Prompt</b> selecteerd. Zoniet zal je zelf een PATH moeten toevoegen om git via de command prompt te laten werken.
+Ga naar <a href="https://git-scm.com/download/win">deze link</a> en installeer git. Let op wanneer je de stappen uitvoert van de git installer. Zorg ervoor dat je de optie <b>Git from the command line and also from 3rd-party software</b> selecteerd. Zoniet zal je zelf een PATH moeten toevoegen om git via de command prompt te laten werken.
 
 ## Installeer nvm (node version manager) op je pc
 
